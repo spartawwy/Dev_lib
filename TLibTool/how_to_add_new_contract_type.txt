@@ -1,0 +1,7 @@
+Steps to add new contract type:
+
+1. derive/typedef new contract type from ContractType or one of its derived classes
+2. include the new file into tsystem_contract_type.h
+3. update bool operator<(const Contract& left, const Contract& right)
+4. update ProductInfo::ContractType, ContractTypeToString(), and StringToContractType()
+5. update ConInfo::LoadContractHelper()

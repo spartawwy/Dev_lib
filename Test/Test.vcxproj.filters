@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="proto">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="assist">
+      <UniqueIdentifier>{ff460ed9-aa1b-4970-a7d5-fa429d160b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="communication">
+      <UniqueIdentifier>{e818ec92-808f-41de-a99a-fc01275f23b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{7e4d06a7-01b3-49eb-9ea1-998fbc91f8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="appbase">
+      <UniqueIdentifier>{12bf4553-5902-4d4d-9f2e-acbb796e997b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tsystem_error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_core_error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_core_paths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_string_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_message_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_utility_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_task_service.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="persist_service.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_local_logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_configuration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="work_ptr.cpp">
+      <Filter>assist</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_connection.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_communication_dock.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_tcp_dock.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp_session.cpp">
+      <Filter>communication</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_app_config.cpp">
+      <Filter>appbase</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_app_registration.cpp">
+      <Filter>appbase</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_appbase.cpp">
+      <Filter>appbase</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_sqlite_functions.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_serialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sql_error.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite_connection.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_topic_service.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_return_code.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\core\tsystem_log_msg.pb.cc">
+      <Filter>proto</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\core\tsystem_return_code.pb.cc">
+      <Filter>proto</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\core\tsystem_time.pb.cc">
+      <Filter>proto</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite_statement.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_read_buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shared_memory.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="persist_service.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="service_signal_set.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TLib\core\tsystem_return_code.pb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="work_ptr.h">
+      <Filter>assist</Filter>
+    </ClInclude>
+    <ClInclude Include="tsystem_tcp_dock.h">
+      <Filter>communication</Filter>
+    </ClInclude>
+    <ClInclude Include="tcp_session.h">
+      <Filter>communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TLib\core\tsystem_app_config.h">
+      <Filter>appbase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TLib\core\tsystem_app_registration.h">
+      <Filter>appbase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TLib\core\tsystem_sqlite_functions.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_local_logger.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_log_msg.pb.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_return_code.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_return_code.pb.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_time.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_time.pb.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_app_config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_app_registration.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_appbase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_cfstream.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_communication_common.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_communication_dock.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_configuration.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_connection.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_common.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_error.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_paths.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_error.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_message_system.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_read_buffer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_serialization.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_sqlite_functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_string_functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_task_service.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_topic_service.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\core\tsystem_utility_functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TLib\core\tsystem_time.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Z:\include\TLib\core\tsystem_log_msg.proto">
+      <Filter>proto</Filter>
+    </None>
+    <None Include="Z:\include\TLib\core\tsystem_return_code.proto">
+      <Filter>proto</Filter>
+    </None>
+    <None Include="Z:\include\TLib\core\tsystem_time.proto">
+      <Filter>proto</Filter>
+    </None>
+  </ItemGroup>
+</Project>

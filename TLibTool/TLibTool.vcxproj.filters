@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="layinfo">
+      <UniqueIdentifier>{ededc119-9adf-4cce-a2e2-944c552bd16f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="communication">
+      <UniqueIdentifier>{074b140a-63de-4139-82b6-ca0a072bdd2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{d7749112-a67c-4a59-90f1-5cc803f0443f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl">
+      <UniqueIdentifier>{67b36c21-ecde-4bc1-bce7-ab8c278d5fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="impl\system dependent">
+      <UniqueIdentifier>{53f1d1cf-9949-4f06-b706-309e7802d418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract">
+      <UniqueIdentifier>{e054cb6d-a968-42ae-98a5-06c8e0882c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract\type">
+      <UniqueIdentifier>{087bac5e-f652-4128-956c-3a7e9e471112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="communication\request">
+      <UniqueIdentifier>{def189c8-af11-431b-8838-0afcbdc65425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="contract\contract_list">
+      <UniqueIdentifier>{885510b7-7b81-40ef-bb39-e1a50bea1a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="position">
+      <UniqueIdentifier>{329d588a-ec57-47dc-9989-88c2596a6fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerClient">
+      <UniqueIdentifier>{3f60cd3c-88d3-42f6-818f-bb6b4bb9032e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="impl\tsystem_domain_name.h">
+      <Filter>impl\system dependent</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_generic_request.h">
+      <Filter>communication\request</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_generic_request.pb.h">
+      <Filter>communication\request</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_list.h">
+      <Filter>contract\contract_list</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_base_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_binary_option_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_spot_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_option_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_future_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_future_option_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_validation.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_type.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract_product.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_contract.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_coninfo.h">
+      <Filter>contract\type</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_costrule.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_exchange.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_marketrule.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_resource.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_tickrule.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_tradehour.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_layinfo_underlying.h">
+      <Filter>layinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_exchange_position.h">
+      <Filter>position</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_fake_position.h">
+      <Filter>position</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_posinfo.h">
+      <Filter>position</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_server_client_appbase.h">
+      <Filter>ServerClient</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_server_appbase.h">
+      <Filter>ServerClient</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_async_operation.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_cmdoption.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_app_heartbeat.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_connection_handshake.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_heartbeat_msg.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_dump_reader.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_exe_frame.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_generic_param.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_generic_param.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_listing.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_listing.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_client_socket.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_raid_master.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_rational_number.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_rational_number.pb.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_table_definition.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_topic_client_socket.h" />
+    <ClInclude Include="Z:\include\TLib\tool\tsystem_topic_request.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="impl\tsystem_domain_name.cpp">
+      <Filter>impl\system dependent</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_generic_request.cpp">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_generic_request.pb.cc">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_contract_list.cpp">
+      <Filter>contract\contract_list</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_contract_option_type.cpp">
+      <Filter>contract\type</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_contract_validation.cpp">
+      <Filter>contract\type</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_contract_product.cpp">
+      <Filter>contract\type</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_contract.cpp">
+      <Filter>contract\type</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_coninfo.cpp">
+      <Filter>contract\type</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_costrule.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_exchange.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_resource.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_tickrule.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_tradehour.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_layinfo_underlying.cpp">
+      <Filter>layinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_exchange_position.cpp">
+      <Filter>position</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_fake_position.cpp">
+      <Filter>position</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_posinfo.cpp">
+      <Filter>position</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_async_operation.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_cmdoption.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_app_heartbeat.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_connection_handshake.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_heartbeat_msg.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_dump_reader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_exe_frame.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_generic_param.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_generic_param.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_listing.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_listing.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_client_socket.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_raid_master.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_rational_number.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_rational_number.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_table_definition.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_topic_client_socket.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_topic_request.pb.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_request_help.cpp">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_request_ping.cpp">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_request_reload_configs.cpp">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\include\TLib\tool\tsystem_request_shutdown.cpp">
+      <Filter>communication\request</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_server_appbase.cpp">
+      <Filter>ServerClient</Filter>
+    </ClCompile>
+    <ClCompile Include="tsystem_server_client_appbase.cpp">
+      <Filter>ServerClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Z:\include\TLib\tool\tsystem_generic_request.proto">
+      <Filter>communication\request</Filter>
+    </None>
+    <None Include="Z:\include\TLib\tool\tsystem_connection_handshake.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_generic_param.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_heartbeat_msg.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_listing.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_raid_master.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_rational_number.proto" />
+    <None Include="Z:\include\TLib\tool\tsystem_topic_request.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="how_to_add_new_contract_type.txt">
+      <Filter>contract</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

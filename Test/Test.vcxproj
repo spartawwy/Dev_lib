@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D3EF13D-A5DD-471C-856C-D47EC1B5E5E8}</ProjectGuid>
+    <RootNamespace>Test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="z:\VSSetting\DevDirSetting.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="z:\VSSetting\NDebugSetting.props" />
+    <Import Project="z:\VSSetting\DevDirSetting.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>TLib_d</TargetName>
+    <IncludePath>$(SolutionDir);$(DevDependency)\include;$(VCInstallDir)include;$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\$(platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\$(platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>z:\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_MBCS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>Z:\lib\win32</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf-lite_d.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)TLib_d$(TargetExt)</OutputFile>
+    </Lib>
+    <CustomBuildStep>
+      <Command>copy $(OutDir)TLib_d$(TargetExt)  z:\lib\win32\  </Command>
+      <Outputs>'copy tlib_d.lib'</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>z:\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)TLib_d$(TargetExt)</OutputFile>
+      <AdditionalDependencies>libprotobuf-lite_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>z:\lib\x64</AdditionalLibraryDirectories>
+    </Lib>
+    <CustomBuildStep>
+      <Command>copy $(OutDir)TLib_d$(TargetExt)  z:\lib\x64\  </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>'copy tlib_d'</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>z:\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_MBCS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)TLib$(TargetExt)</OutputFile>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy $(OutDir)TLib$(TargetExt)  z:\lib\win32\  </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>'copy TLib.lib'</Outputs>
+    </CustomBuildStep>
+    <Lib>
+      <OutputFile>$(OutDir)TLib$(TargetExt)</OutputFile>
+      <AdditionalDependencies>libprotobuf-lite.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Z:\lib\win32</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="sqlite_connection.cpp" />
+    <ClCompile Include="sqlite_statement.cpp" />
+    <ClCompile Include="sql_error.cpp" />
+    <ClCompile Include="tcp_session.cpp" />
+    <ClCompile Include="tsystem_appbase.cpp" />
+    <ClCompile Include="tsystem_app_config.cpp" />
+    <ClCompile Include="tsystem_app_registration.cpp" />
+    <ClCompile Include="tsystem_communication_dock.cpp" />
+    <ClCompile Include="tsystem_configuration.cpp" />
+    <ClCompile Include="tsystem_connection.cpp" />
+    <ClCompile Include="tsystem_core_error.cpp" />
+    <ClCompile Include="tsystem_core_paths.cpp" />
+    <ClCompile Include="tsystem_error.cpp" />
+    <ClCompile Include="tsystem_local_logger.cpp" />
+    <ClCompile Include="tsystem_message_system.cpp" />
+    <ClCompile Include="persist_service.cpp" />
+    <ClCompile Include="tsystem_read_buffer.cpp" />
+    <ClCompile Include="tsystem_return_code.cpp" />
+    <ClCompile Include="tsystem_serialization.cpp" />
+    <ClCompile Include="tsystem_sqlite_functions.cpp" />
+    <ClCompile Include="tsystem_string_functions.cpp" />
+    <ClCompile Include="tsystem_task_service.cpp" />
+    <ClCompile Include="tsystem_tcp_dock.cpp" />
+    <ClCompile Include="tsystem_time.cpp" />
+    <ClCompile Include="tsystem_topic_service.cpp" />
+    <ClCompile Include="tsystem_utility_functions.cpp" />
+    <ClCompile Include="work_ptr.cpp" />
+    <ClCompile Include="Z:\include\TLib\core\tsystem_log_msg.pb.cc" />
+    <ClCompile Include="Z:\include\TLib\core\tsystem_return_code.pb.cc" />
+    <ClCompile Include="Z:\include\TLib\core\tsystem_time.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TLib\core\tsystem_app_config.h" />
+    <ClInclude Include="..\TLib\core\tsystem_app_registration.h" />
+    <ClInclude Include="..\TLib\core\tsystem_return_code.pb.h" />
+    <ClInclude Include="..\TLib\core\tsystem_sqlite_functions.h" />
+    <ClInclude Include="..\TLib\core\tsystem_time.h" />
+    <ClInclude Include="service_signal_set.h" />
+    <ClInclude Include="shared_memory.hpp" />
+    <ClInclude Include="persist_service.h" />
+    <ClInclude Include="tcp_session.h" />
+    <ClInclude Include="tsystem_tcp_dock.h" />
+    <ClInclude Include="work_ptr.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_appbase.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_app_config.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_app_registration.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_cfstream.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_communication_common.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_communication_dock.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_configuration.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_connection.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_common.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_error.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_core_paths.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_error.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_local_logger.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_log_msg.pb.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_message_system.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_read_buffer.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_return_code.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_return_code.pb.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_serialization.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_sqlite_functions.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_string_functions.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_task_service.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_time.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_time.pb.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_topic_service.h" />
+    <ClInclude Include="Z:\include\TLib\core\tsystem_utility_functions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Z:\include\TLib\core\tsystem_log_msg.proto" />
+    <None Include="Z:\include\TLib\core\tsystem_return_code.proto" />
+    <None Include="Z:\include\TLib\core\tsystem_time.proto" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
