@@ -75,7 +75,7 @@ std::shared_ptr<Connection> CommunicationDock::Connect(const std::string& addres
             ThrowTException( CoreErrorCategory::ErrorCode::BAD_CONTENT
 				    , "CommunicationDock::AsyncConnect"
 				    , "address:" + address); 
-        target_ip = str_vec.at(2);
+        target_ip = str_vec.at(1);
     }else
         target_ip = str_vec.at(0);
 
