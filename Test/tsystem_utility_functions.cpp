@@ -36,7 +36,7 @@ void TSystem::utility::CreateDir(const std::string& dir)
 std::string utility::host()
 {
 	// todo: 
-	return "hzdev103";
+	return "WIN20141227ZVZ";
 }
 
 std::string&   replace_all_distinct(std::string& str, const std::string& old_value, const std::string& new_value)   
