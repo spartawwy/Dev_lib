@@ -13,7 +13,7 @@ std::vector<std::string> TSystem::utility::split(const std::string& source, cons
 
 	auto p_source = source.c_str();
 
-	unsigned int match_result[1024];
+	unsigned int match_result[10*1024];
 	memset(match_result, -1, sizeof(match_result));
 	 
 	auto num = KMP(source.c_str(), source.length(), seperator.c_str(), seperator.length(), match_result);
@@ -142,7 +142,7 @@ inline void BuildNext(const char* pattern, size_t length, unsigned int* next)
 unsigned int KMP(const char* text, size_t text_length, const char* pattern, size_t pattern_length, unsigned int* matches)  
 {  
     unsigned int i, j, n;  
-	unsigned int next[1024] = {0};  
+	unsigned int next[100*1024] = {0};  
   
     BuildNext(pattern, pattern_length, next);  
   
