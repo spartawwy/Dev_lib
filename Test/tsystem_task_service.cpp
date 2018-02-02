@@ -36,6 +36,11 @@ void TaskPool::AddWorker()
     pool_->AddWorker();
 }
 
+void TaskPool::AddNormalWorker()
+{
+	pool_->AddNormalWorker();
+}
+
 void TaskPool::AddThisThread()
 {
     // TODO:
