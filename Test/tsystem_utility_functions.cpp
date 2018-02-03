@@ -1,6 +1,7 @@
 #include "TLib/core/tsystem_utility_functions.h"
 
 #include <direct.h>
+#include <windows.h>
 
 using namespace TSystem;
 
@@ -35,8 +36,11 @@ void TSystem::utility::CreateDir(const std::string& dir)
 
 std::string utility::host()
 {
-	// todo: 
-	return "WIN20141227ZVZ";
+	const DWORD len = 128;
+	char strBuf[len] = {0};
+	DWORD  max_len = len; 
+	GetComputerName(strBuf, &max_len);
+	return strBuf; 
 }
 
 std::string&   replace_all_distinct(std::string& str, const std::string& old_value, const std::string& new_value)   
