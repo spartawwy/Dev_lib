@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <regex>
 
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
@@ -67,6 +68,16 @@ void CommunicationDock::StartPort(unsigned short port, ConnectingHandler&& handl
 std::shared_ptr<Connection> CommunicationDock::Connect(const std::string& address, int port, TSystem::TError& err
 	, Connection::Type type)
 {
+    static auto is_ipstr_regex = [](const std::string &ip_sample)->bool
+    { 
+        const static std::regex ip_regex("^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])(\\.)(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)(\\.)(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)(\\.)(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$");
+
+        std::smatch match_res;
+        if( std::regex_match( ip_sample.cbegin(), ip_sample.cend(), match_res, ip_regex ) )
+		    return true;
+	    else
+            return false;
+    };
     std::string  target_ip;
 	auto str_vec = Domain2ip(address, port);
     if( str_vec.size() > 1 )
@@ -75,10 +86,24 @@ std::shared_ptr<Connection> CommunicationDock::Connect(const std::string& addres
             ThrowTException( CoreErrorCategory::ErrorCode::BAD_CONTENT
 				    , "CommunicationDock::AsyncConnect"
 				    , "address:" + address); 
-        target_ip = str_vec.at(1);
+        int i = 0;
+        for(; i < str_vec.size(); ++i)
+        {
+            if( is_ipstr_regex(str_vec.at(i)) ) break;
+        }
+        if( i >= str_vec.size() )
+            ThrowTException( CoreErrorCategory::ErrorCode::BAD_CONTENT
+				    , "CommunicationDock::AsyncConnect"
+				    , "address:" + address); 
+        target_ip = str_vec.at(i);
     }else
+    {
+        if( !is_ipstr_regex(str_vec.at(0)) )
+            ThrowTException( CoreErrorCategory::ErrorCode::BAD_CONTENT
+				    , "CommunicationDock::AsyncConnect"
+				    , "address:" + address); 
         target_ip = str_vec.at(0);
-
+    }
     auto tcp_sesstion = std::make_shared<TcpSession>(*tcp_dock_, target_ip.c_str(), port, false);
 
     try
