@@ -38,7 +38,14 @@ CommunicationDock::~CommunicationDock()
 // disconnect all connections 
 void CommunicationDock::Shutdown()
 {
-    // todo:
+    // ndchk
+    std::vector<int> pids;
+    std::for_each( std::begin(connections_), std::end(connections_)
+        , [&pids](std::unordered_map<int, std::shared_ptr<Connection> > ::reference entry)
+    {
+        pids.push_back(entry.first); 
+    });
+    std::for_each( std::begin(pids), std::end(pids), [this](int id){ this->Unregister(id); } );
 }
 
 // get a connection, return a weak_ptr in case of removed connid

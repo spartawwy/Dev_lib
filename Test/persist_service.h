@@ -2,12 +2,16 @@
 #define PERSIST_SERVICE_H_
 
 #include <future>
-#include <thread>
 #include <vector>
 #include <queue>
 #include <mutex>    
 #include <condition_variable> 
 
+#ifdef USE_BOOST_THREAD
+#include <boost/thread.hpp>
+#else
+#include <thread>
+#endif
 #include <boost/asio/strand.hpp>
 #include <boost/asio/io_service.hpp>
 
@@ -99,7 +103,11 @@ namespace  TSystem
 
        size_t normal_threads_num_;
        // need to keep track of threads so we can join them    
-       std::vector< std::thread > workers;    
+#ifdef USE_BOOST_THREAD
+       std::vector< boost::thread > workers;   
+#else
+       std::vector< std::thread > workers;   
+#endif 
        // the task queue    
        std::queue< std::function<void()> > tasks;    
        

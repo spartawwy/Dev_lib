@@ -54,8 +54,10 @@ void PersistService::AddNormalWorker()
                     [this]{ return this->stop_ || !this->tasks.empty(); });    
 
                 if( this->stop_ /*&& this->tasks.empty()*/)    
+                {  
+                    ExitThread(0); 
                     return;    
-
+                }
                 task = std::move(this->tasks.front());    
                 this->tasks.pop();    
             }    
@@ -68,9 +70,25 @@ void PersistService::AddNormalWorker()
 
 void PersistService::Join()
 {
-    std::for_each(std::begin(workers), std::end(workers), [](std::thread &entry)
+#ifdef USE_BOOST_THREAD
+    std::for_each(std::begin(workers), std::end(workers), [this](boost::thread &entry)
+#else
+    std::for_each(std::begin(workers), std::end(workers), [this](std::thread &entry)
+#endif
     {
-        entry.join();
+#if  1
+        try
+        {
+            if( entry.joinable() )
+                entry.join();
+        }catch(std::exception &e)
+        {
+            std::cout << e.what() << std::endl;
+        }
+#else 
+        WaitForSingleObject(entry.native_handle(), INFINITE);
+        CloseHandle(entry.native_handle());
+#endif
     });
 }
 
@@ -78,11 +96,13 @@ void PersistService::Stop()
 {
     stop_  = true;
     condition.notify_all();
+#if 1 
     if( work_ )
     {
         delete work_; 
         work_ = nullptr;
     }
+#endif
 }
 
 PersistService::~PersistService()
