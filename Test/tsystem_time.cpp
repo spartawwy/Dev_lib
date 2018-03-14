@@ -116,8 +116,8 @@ std::chrono::system_clock::time_point TSystem::MakeTimePoint( int year,
 {
     // todo: need check millisecondes
     struct tm t_m;
-    t_m.tm_year = year;
-    t_m.tm_mon = month;
+    t_m.tm_year = year - 1900;
+    t_m.tm_mon = month - 1;
     t_m.tm_mday = day;
     t_m.tm_hour = hour;
     t_m.tm_min = min;
