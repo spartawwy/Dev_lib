@@ -55,7 +55,7 @@ void PersistService::AddNormalWorker()
 
                 if( this->stop_ /*&& this->tasks.empty()*/)    
                 {  
-                    ExitThread(0); 
+                    //ExitThread(0); // this may cause join fail, so nouse it
                     return;    
                 }
                 task = std::move(this->tasks.front());    
