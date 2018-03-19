@@ -166,7 +166,10 @@ void TimeCount::Start()
 
 double TimeCount::Count() const
 {
-    return static_cast<double>(start_.time_since_epoch().count());
+    auto tp_now = system_clock::now(); 
+    auto duration = duration_cast<microseconds>(tp_now - start_);
+     
+    return static_cast<double>(duration.count() * microseconds::period::num / microseconds::period::den);
 }
 
 DateComponent TSystem::FromLongdate(int longdate)
