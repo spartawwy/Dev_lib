@@ -161,15 +161,14 @@ TimeCount::TimeCount()
 
 void TimeCount::Start()
 {
-    start_ = std::chrono::system_clock::now();
+    start_ = std::chrono::steady_clock::now();
 }
 
 double TimeCount::Count() const
 {
-    auto tp_now = system_clock::now(); 
+    auto tp_now = steady_clock::now(); 
     auto duration = duration_cast<microseconds>(tp_now - start_);
-     
-    return static_cast<double>(duration.count() * microseconds::period::num / microseconds::period::den);
+    return 1000000.0 * static_cast<double>(duration.count()) * microseconds::period::num / microseconds::period::den;
 }
 
 DateComponent TSystem::FromLongdate(int longdate)
