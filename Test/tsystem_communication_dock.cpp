@@ -159,7 +159,10 @@ void CommunicationDock::Register(const std::shared_ptr<Connection>& pconn)
     if( pconn->conn_id_ <= 0 )
         pconn->conn_id_ = NextConnID();
     if( connections_.find(pconn->conn_id_) == connections_.end() )
+    {
         connections_.insert(std::make_pair(pconn->conn_id_, pconn));
+        pconn->status_ = Connection::Status::connected;
+    }
 }
 
 std::shared_ptr<Connection> CommunicationDock::Unregister(int connid )
@@ -171,6 +174,7 @@ std::shared_ptr<Connection> CommunicationDock::Unregister(int connid )
 	{
 		conn = iter->second;
         connections_.erase(iter);
+        conn->status_ = Connection::Status::disconnected;
 	}
 	return conn;
 }
